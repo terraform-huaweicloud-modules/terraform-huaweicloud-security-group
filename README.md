@@ -51,6 +51,7 @@ existing security group only if you specify `security_group_id` parameter.
 | security_group_id  | Specifying existing security group ID  | string  | `""`  | no  |
 | name  | The name of the security group  | string  | `""`  | no  |
 | description  | The description of the security group  | string  | `""`  | no  |
+| delete_default_rules  | Whether or not to delete the default egress security rules  | bool  | `true`  | no  |
 | rules  | List of rules associated with the security group  | list(map(string))  | `[]`  | no  |
 
 
