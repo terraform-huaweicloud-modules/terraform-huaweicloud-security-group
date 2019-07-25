@@ -1,8 +1,9 @@
 # Create Security Group
 resource "huaweicloud_networking_secgroup_v2" "this" {
-  count       = "${var.security_group_id=="" ? 1 : 0}"
-  name        = "${var.name}"
-  description = "${var.description}"
+  count                = "${var.security_group_id=="" ? 1 : 0}"
+  name                 = "${var.name}"
+  description          = "${var.description}"
+  delete_default_rules = "${var.delete_default_rules}"
 }
 
 # Create Security Group Rule

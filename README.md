@@ -20,17 +20,17 @@ module "example" {
   // Security Group Rule
   rules = [
     {
-      direction = "ingress",
-      ethertype = "IPv4",
-      protocol = "tcp",
+      direction      = "ingress",
+      ethertype      = "IPv4",
+      protocol       = "tcp",
       port_range_min = "22",
       port_range_max = "22",
       remote_ip_cidr = "0.0.0.0/0"
     },
     {
-      direction = "ingress",
-      ethertype = "IPv4",
-      protocol = "tcp",
+      direction      = "ingress",
+      ethertype      = "IPv4",
+      protocol       = "tcp",
       port_range_min = "443",
       port_range_max = "443",
       remote_ip_cidr = "0.0.0.0/0"

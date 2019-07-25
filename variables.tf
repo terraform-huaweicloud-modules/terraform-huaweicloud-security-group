@@ -13,6 +13,12 @@ variable "description" {
   default     = ""
 }
 
+variable "delete_default_rules" {
+  type        = bool
+  description = "Whether or not to delete the default egress security rules"
+  default     = true
+}
+
 variable "rules" {
   type = list(map(string))
   description = "List of rules in a security group"
