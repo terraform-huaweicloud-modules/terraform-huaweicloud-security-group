@@ -13,6 +13,6 @@ resource "huaweicloud_networking_secgroup_rule_v2" "this" {
   protocol          = "${lookup(var.rules[count.index], "protocol")}"
   port_range_min    = "${lookup(var.rules[count.index], "port_range_min")}"
   port_range_max    = "${lookup(var.rules[count.index], "port_range_max")}"
-  remote_ip_prefix  = "${lookup(var.rules[count.index], "remote_ip_prefix")}"
+  remote_ip_prefix  = "${lookup(var.rules[count.index], "remote_ip_cidr")}"
   security_group_id = "${var.security_group_id=="" ? join("",huaweicloud_networking_secgroup_v2.this.*.id) : var.security_group_id}"
 }
