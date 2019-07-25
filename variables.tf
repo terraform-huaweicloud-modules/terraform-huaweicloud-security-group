@@ -14,7 +14,7 @@ variable "description" {
 }
 
 variable "rules" {
-  type = "list(map(string))"
+  type = list(map(string))
   description = "List of rules in a security group"
   default     = []
 }
