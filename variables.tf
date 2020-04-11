@@ -20,7 +20,15 @@ variable "delete_default_rules" {
 }
 
 variable "rules" {
-  type = list(map(string))
+  type = list(object({
+    direction      = string
+    ethertype      = string
+    protocol       = string
+    port_range_min = string
+    port_range_max = string
+    remote_ip_cidr = string
+  }))
   description = "List of rules in a security group"
   default     = []
 }
+
